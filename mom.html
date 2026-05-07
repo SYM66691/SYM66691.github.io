@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>母亲节快乐｜致我最爱的妈妈</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #ffecd2, #fcb69f);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* 环绕照片容器 - 放大整体环绕范围，远离中间卡片 */
+        .photo-wrap {
+            position: absolute;
+            width: 850px;
+            height: 850px;
+            animation: rotate 25s linear infinite;
+        }
+        /* 环绕照片样式 */
+        .round-photo {
+            position: absolute;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #fff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        /* 重新分配位置，拉大与中间卡片的距离 */
+        .round-photo:nth-child(1) { top: 5%; left: 50%; transform: translateX(-50%); }
+        .round-photo:nth-child(2) { top: 25%; right: 8%; }
+        .round-photo:nth-child(3) { bottom: 25%; right: 8%; }
+        .round-photo:nth-child(4) { bottom: 5%; left: 50%; transform: translateX(-50%); }
+        .round-photo:nth-child(5) { bottom: 25%; left: 8%; }
+        .round-photo:nth-child(6) { top: 25%; left: 8%; }
+
+        /* 旋转动画 */
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* 中间贺卡 */
+        .card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 30px 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 400px;
+            width: 100%;
+            position: relative;
+            z-index: 10;
+        }
+        .title {
+            font-size: 28px;
+            color: #e64340;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .content {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+        .heart {
+            font-size: 40px;
+            color: #e64340;
+            animation: beat 1s infinite alternate;
+        }
+        @keyframes beat {
+            from { transform: scale(1); }
+            to { transform: scale(1.2); }
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #999;
+            position: relative;
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 环绕照片 -->
+    <div class="photo-wrap">
+        <img class="round-photo" src="https://qfile.qq.com/q/zBfN9CquBy" alt="妈妈">
+        <img class="round-photo" src="https://qfile.qq.com/q/7kkw4VNnLq" alt="妈妈">
+        <img class="round-photo" src="https://qfile.qq.com/q/JKxOjAXOUw" alt="妈妈">
+        <img class="round-photo" src="https://qfile.qq.com/q/hpzbwSiieA" alt="妈妈">
+        <img class="round-photo" src="https://qfile.qq.com/q/cwL7tgeEPm" alt="妈妈">
+        <img class="round-photo" src="https://qfile.qq.com/q/iyYVLyVms8" alt="妈妈">
+        <img class="round-photo" src="https://qfile.qq.com/q/WbSmatk8YG" alt="妈妈">
+    </div>
+
+    <!-- 中间贺卡 -->
+    <div class="card">
+        <div class="title">母亲节快乐 ❤️</div>
+        <div class="content">
+            亲爱的妈妈：<br>
+            从小到大，您一直包容我的任性，默默为我付出所有。<br>
+            您总把最好的留给我，自己却从不计较。<br>
+            以前不懂您的辛苦，现在慢慢明白，您才是最爱我的人。<br>
+            母亲节到了，只想对您说：妈妈，您辛苦了，我永远爱您！
+        </div>
+        <div class="heart">❤️</div>
+    </div>
+
+    <div class="footer">您的孩子 敬上</div>
+</body>
+</html>
